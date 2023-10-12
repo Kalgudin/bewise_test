@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   web:
-    image: djan-psql
+    image: django-psql
     restart: always
     build: ./base
     command: python manage.py runserver 0.0.0.0:8000
@@ -25,7 +25,7 @@ services:
       - ./base/base/.env.dev
 
     environment:
-      - POSTGRES_DB=web_base
+      - POSTGRES_DB=bewise_test
       - POSTGRES_USER=web_admin
       - POSTGRES_PASSWORD=admin
 
